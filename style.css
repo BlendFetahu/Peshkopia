@@ -5,10 +5,11 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
-
+/*Stilet qe vlejne per gjithe body */
 body {
   background: url('background.jpg') no-repeat center center/cover;
   color: #fff;
+  overflow-y: hidden;
 }
 
 /* Stilet për navbar */
@@ -20,13 +21,23 @@ body {
   background-color: #4E3629;
   height: 110px;
 }
-
-.logo img {
-  width: 90px;
-  height: auto;
-  border-radius: 30px;
+/*Stilet qe vlejne per paragrafin p*/
+.navbar p{
+  position: absolute;
+  margin-left: 120px;
+  margin-top: -62px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
-
+.logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+}
+/*Stilet qe vlejne per nav-links direkt per listat */
 .nav-links ul {
   display: flex;
   list-style: none;
@@ -61,15 +72,15 @@ body {
   color: #FFFFFF; 
   padding: 20px;
   position: relative;
-  z-index: -1;
+  margin-bottom: 20px;
 }
 
 /* Stil për h1 */
 .hero-section h1 {
-  font-size: 4em;
+  font-size: 5.0em;
   font-family: 'Arial', sans-serif;
   color: #F4C95D; 
-  margin-bottom: 10px; 
+  margin-bottom: 25px; 
   text-transform: uppercase; 
   letter-spacing: 5px; 
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
@@ -77,13 +88,14 @@ body {
 
 /* Stil për paragraf (p) */
 .hero-section p {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-family: 'Arial', sans-serif;
   color: #E3C39B; 
   max-width: 600px; 
   margin: 0 auto; 
   letter-spacing: 2px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 
