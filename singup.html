@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Peshkopia</title>
+    <link rel="stylesheet" href="singup.css">
+</head>
+<body>
+    <div class="container">
+        <form class="signup">
+            <h2>Sign up</h2>
+
+            <div class="input">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Emri dhe Mbiemri" required minlength="5" maxlength="25">
+            </div>
+            <div class="input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Shenoni Emailin tuaj" required>
+            </div>
+            <div class="input">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Shenoni Passwordin" required minlength="8">
+            </div>
+            <div class="input">
+                <label for="confirm">Confirm:</label>
+                <input type="password" id="confirm" placeholder="Rishkruani Passwordin" required minlength="8">
+            </div>
+
+            <button>Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
