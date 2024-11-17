@@ -1,47 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Peshkopia Restaurant</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-
-<header>
-    <div class="navbar">
+    <!-- Header -->
+    <header>
         <div class="logo">
-            <img src="images/logo.jpg" alt="Peshkopia Restaurant Logo">
+            <img src="/images/logo.jpg" alt="Logo e Restorantit">
+            <p>Peshkopia Restaurant</p>
         </div>
-        <div class="nav-links">
+        <nav class="nav-links">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index2.html">RRETH NESH</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">RESERVATION</a></li>
-                <li><a href="#">LOG IN</a></li>
-                <li><a href="#">SIGN UP</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Rreth Nesh</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <!-- Seksioni "Rreth Nesh" -->
+    <section id="rreth-nesh" class="section-orange">
+        <div class="content">
+
+            <div class="content-photo">
+            <img src="/images/IMG_0288.jpeg" alt="Foto e Restorantit">
+            </div>
+            <h2>RRETH NESH</h2>
+
+            <div class="content-paragraph">
+            <p>Restorani Peshkopia në Drenas ofron një përvojë unike ku shija tradicionale dhe mikpritja e ngrohtë takohen. Me një menu të pasur dhe ambient të këndshëm, ky është vendi ideal për të shijuar ushqime të freskëta dhe momente të paharrueshme me miqtë dhe familjen. Ejani dhe përjetoni shërbimin e jashtëzakonshëm që vetëm Peshkopia mund t'ju ofrojë!</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="tel:+38344199111" class="icon">
+                    <i class="fab fa-phone"></i>
+                </a>
+                <a href="https://instagram.com/restaurant.peshkopia" target="_blank" class="icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/restaurant.peshkopia" target="_blank" class="icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </section>
 
-<div class="hero-section">
-   <img src="/images/image0 (12).jpeg" alt="rreth nesh foto start">
-   <h1>Rreth Nesh</h1>
-   <h2>
-       Mirësevini në Restaurant Peshkopia Një Traditë Shijeje në Drenas <br>
-       Për më shumë se 20 vjet, Restaurant Peshkopia ka shërbyer në zemër të Drenasit, duke ofruar një eksperiencë të jashtëzakonshme në ushqim, e cila është rrënjosur në traditë, cilësi dhe pasion.
-   </h2> 
-</div>
 
-<footer class="footer">
-    <div class="footer-content">
-        <a href="https://www.instagram.com/restaurant.peshkopia/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/RestaurantPeshkopia/" target="_blank">Facebook</a>
-        <span>📞 +383 44 199 111</span>
-    </div>
-</footer>
 
+    <!-- Seksioni "Ekipi Ynë" -->
+    <section id="ekipi-yne" class="section-dark">
+
+        <div class="section-dark-titulli">
+        <h2>EKIPI YNE</h2>
+        </div>
+
+        <div class="team-members">
+            <div class="member1">
+                <img src="/images/kuzhinieri1.jpg" alt="Shefi 1">
+                <h3>Erion Gashi</h3>
+                <p>Chief i Kuzhines</p>
+            </div>
+            <div class="member2">
+                <img src="/images/kuzhinieri2.jpg" alt="Shefi 2">
+                <h3>Endrit Hoxha</h3>
+                <p>Salad Chief</p>
+            </div>
+            <div class="member3">
+                <img src="/images/kuzhinieri3.jpg" alt="Shefi 3">
+                <h3>Arben Dajti</h3>
+                <p>Pastichery Chief</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Peshkopia Restaurant. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+
