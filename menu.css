@@ -59,3 +59,61 @@
   .nav-links ul li a:hover {
     color: #f0a500;
   }
+  /*Kodi per pjesen main */
+  .menu-section {
+    background-color: #ffd700; /* Një ngjyrë e ngrohtë */
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .menu-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .menu-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .menu-button:hover {
+    background-color: #444;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .menu-item p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
