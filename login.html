@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="login.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     
     <div class="container">
        
-        <form class="log-in">
+        <form class="log-in" method="get" id="form">
 
            <h2>Log In</h2>
 
@@ -21,7 +22,7 @@
 
            <div class="input">
             <label for="psw"><b>Password:</b></label>
-            <input type="password" id="psw" placeholder="Shënoni Fjalëkalimin" required minlength="8">
+            <input type="password" id="psw" placeholder="Shënoni Fjalëkalimin">
            </div>
 
            <button type="submit">Kyçu</button>

@@ -26,7 +26,6 @@ body {
   position: absolute;
   margin-left: 120px;
   margin-top: -62px;
-  text-decoration: none;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
@@ -79,7 +78,7 @@ body {
 /* Stil për h1 */
 .hero-section h1 {
   font-size: 5.0em;
-  font-family: 'Arial', sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #F4C95D; 
   margin-bottom: 25px; 
   text-transform: uppercase; 
@@ -90,7 +89,7 @@ body {
 /* Stil për paragraf (p) */
 .hero-section p {
   font-size: 1.7em;
-  font-family: 'Arial', sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #E3C39B; 
   max-width: 600px; 
   margin: 0 auto; 
