@@ -121,3 +121,22 @@ body {
   right: 10%;
   opacity: 0.5;
 }
+
+.w-button{
+  padding: 15px;
+  font-size: 20px;
+  background-color:#5d4037 ;
+  font-weight: bold;
+  color:#E3C39B;
+  border: none;
+  border-radius: 50px;
+  width: 180px;
+}
+.w-button a{
+  color: #E3C39B;
+  text-decoration: none;
+}
+
+.w-button:hover{
+  background-color: #7a5547;
+}

@@ -20,7 +20,7 @@ body{
     border: 2px solid rgba(211, 84, 0, 0);
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    height: 560px;
+    height: 580px;
     backdrop-filter: blur(35px);
 }
 
@@ -59,8 +59,25 @@ button{
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover{
     background-color: #b34100;
+}
+
+.options{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color:white;
+}
+
+.options a{
+    text-decoration: none;
+    color: #d35400;
+}
+
+.options a:hover{
+    color: #b34100;
 }
