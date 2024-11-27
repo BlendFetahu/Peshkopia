@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="reservation.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In | Peshkopia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervimi Tavolinës</title>
+  <link rel="stylesheet" href="reservation.css">
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="Peshkopia Restaurant Logo">
-                <p>Peshkopia Restaurant</p>
-            </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="index2.html">RRETH NESH</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="reservation.html">RESERVATION</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a href="singup.html">SIGN UP</a></li>
-                </ul>
-            </div>
+
+  <header>
+    <div class="navbar">
+       <div class="logo">
+          <img src="images/logo.jpg" alt="Peshkopia Restaurant Logo">
+           <p>Peshkopia Restaurant</p>
+      </div>
+          <div class="nav-links">
+              <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="index2.html">RRETH NESH</a></li>
+                  <li><a href="#">MENU</a></li>
+                  <li><a href="reservation.html">RESERVATION</a></li>
+                  <li><a href="login.html">LOG IN</a></li>
+                  <li><a href="singup.html">SIGN UP</a></li>
+               </ul>
+          </div>
+      </div>
+  </header>
+
+
+
+  <div class="container">
+    <h1>Rezervimi Tavolinës</h1>
+    <p>Ju lutem plotësoni formularin më poshtë për të rezervuar tavolinën tuaj. Përmes <strong>SMS</strong> do të konfrimojmë rezervimin tuaj sa më shpejt të jetë e mundur. </p>
+    <form class="rezervimi">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" id="data" required>
         </div>
-          </header>
-<div class="container">
-  <div class="form-container">
-    <h2>TABLE RESERVATION</h2>
-    <form>
-        <div>
-        <label for="name">Emri dhe mbiemri</label>
-        <input type="text" id="name" name="name" placeholder="Emri dhe mbiemri" required>
+        <div class="form-group">
+          <label for="emri">Emri</label>
+          <input type="text" id="emri" placeholder="Shkruani emrin tuaj" required>
         </div>
-        <label for="email">Email Adresa</label>
-        <input type="email" id="email" name="email" placeholder="Email Addresa" required>
       </div>
-       <div>
-        <label for="phone number">Numri i telefonit</label>
-        <input type="tel" id="phone number" name="phone number" placeholder="Numri i telefonit" required>
+      
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Emaili | Opsionale</label>
+          <input type="email" id="email" placeholder="Shkruani emailin tuaj">
+        </div>
+        <div class="form-group">
+          <label for="teftuarit">Numri i të ftuarëve</label>
+          <input type="number" id="teftuarit" placeholder="Numri" required>
+        </div>
       </div>
-      <div>
-        <label for="date">Data e rezervimit</label>
-        <input type="date" id="date" name="date" placeholder="Data e rezervimit" required>
+      
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="koha">Koha</label>
+          <input type="time" id="koha" required>
+        </div>
+        <div class="form-group">
+          <label for="telefoni">Numri Telefonit</label>
+          <input type="tel" id="telefoni" placeholder="Nr.Telefoni" required>
+        </div>
       </div>
-      <div>
-        <label for="time">Koha e ardhjes</label>
-        <input type="text" id="time" name="time" placeholder="Koha e ardhjes" required>
-      </div>
-        <div>
-        <label for="number guests">Numri i musafirëve</label>
-        <input type="number" id="number guests" name="number guests" placeholder="Numri i mysafirëve" min="1"max="60" required>
-      </div>
-    </form> 
+      
     
-     <div>
-        <label for="Detaje">Detaje shtesë</label>
-        <input type="text" id="Detaje" name="Detaje" placeholder="Detaje shtesë" required>
-     </div>
-     <button>Rezervo</button>
+      <div class="form-group">
+        <label for="mesazhi">Mesazhi për ne:</label>
+        <textarea id="mesazhi" placeholder="Shkruani këtu..."></textarea>
+      </div>
+      
+      
+      <button type="submit" class="submit-button">Rezervo Tavolinën</button>
+    </form>
+  </div>
+
 </body>
 </html>
