@@ -92,6 +92,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.menu-header .menu-button a{
+  color: white;
+  text-decoration: none;
+}
+
 .menu-header .menu-button:hover {
   background-color: #333;
 }

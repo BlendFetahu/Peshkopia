@@ -116,3 +116,18 @@ body {
     color: black;
     margin-left: 15px;
   }
+
+  .caption{
+    text-align: center;
+    margin-top: 40px;
+    color: black;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .caption h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+
