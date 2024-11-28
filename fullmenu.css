@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial , sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #fff;
+    overflow-y: hidden;
+    background-color: #bf580b;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+} 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #4E3629;
+    height: 110px;
+  }
+ 
+  .navbar p{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -62px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+ 
+  .logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #f0a500;
+  }
+
+
+  .menu{
+    padding: 20px;
+    margin: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .menu h1{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .menu-item{
+    margin-bottom: 20px;
+  }
+
+  .menu-item p{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.6;
+    position: relative;
+    color: black;
+  }
+
+  .menu-item .pjata{
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .menu-item .dots{
+    flex-grow: 1;
+    border-bottom: 1px dotted black;
+    margin: 0 10px;
+  }
+
+  .menu-item .price{
+    flex-shrink: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .menu-item .description{
+    font-size: 16px;
+    color: black;
+    margin-left: 15px;
+  }
