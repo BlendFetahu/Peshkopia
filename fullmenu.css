@@ -78,6 +78,12 @@ body {
     font-size: 30px;
   }
 
+  .menu h4{ 
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+  }
+
   .menu-item{
     margin-bottom: 20px;
   }
