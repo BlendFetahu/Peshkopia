@@ -26,43 +26,40 @@
           </div>
       </div>
   </header>
-
+  <div class="hero-section">
+    <h1>PESHKOPIA</h1>
+    <p>RESTAURANT</p>
+    <button class="w-button"><a href="fullmenu.html">Klikoni per Menune e plote</a></button>
+  </div>
 
 
   <section class="menu-container">
+<div class="sliderImage">
+  <img id="sliderImage" src="images/Ushqimi1.jpg" alt="Image" />
 
-    <div class="menu-header">
-      <h2>Në Menunë tonë</h2>
-      <button class="menu-button"><a href="fullmenu.html">Shiko Menunë e plotë</a></button>
-    </div>
+  <script>
+    var i = 0;
+    var images = [];
+    var time = 2000;
 
+    //image list
+    images[0] = 'images/Ushqimi1.jpg';
+    images[1] = 'images/Ushqimi2.jpg';
+    images [2] = 'images/Ushqimi4.jpg';
+    images [3] = 'images/Ushqimi5.jpg';
 
-    <div class="menu-cards">
+    // Funksioni për të ndryshuar foton
+function changeImage() {
+  document.getElementById('sliderImage').src = images[i];
+  
+  // Përsërit fotot, nëse arrin fundin e listës, kthehu te fillimi
+  i = (i + 1) % images.length;
+}
 
-      <div class="card">
-        <img src="images/Ushqimi2.jpg" alt="Misherat">
-        <div class="card-content">
-          <h3>Mishërat</h3>
-          <p>I shijshëm , i butë dhe plot me aromë</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/Ushqimi1.jpg" alt="Pastat">
-        <div class="card-content">
-          <h3>Pastat</h3>
-          <p>Të freskëta , kremoze dhe plot shije</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/ushqimi3.jpg" alt="Koktele">
-        <div class="card-content">
-          <h3>Pizzat</h3>
-          <p>Pizza te gatuar me pasion</p>
-        </div>
-      </div>
-    </div>
-  </section>
+// Përdor setInterval për të ndërruar fotot pas çdo 3 sekondash (3000 ms)
+setInterval(changeImage, time);
+      </script>
+</div>
+</div>    
 </body>
 </html>
