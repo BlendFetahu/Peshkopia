@@ -140,3 +140,67 @@ body {
 .w-button:hover{
   background-color: #7a5547;
 }
+/* Media Query për pajisjet me ekrane të vogla (telefonat) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar p {
+    position: static;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  .hero-section {
+    height: 80vh;
+    padding: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5em;
+  }
+
+  .hero-section p {
+    font-size: 1.3em;
+  }
+
+  .w-button {
+    width: 150px;
+    font-size: 18px;
+  }
+}
+
+/* Media Query për pajisjet më të vogla (pajisjet mobile të vogla) */
+@media screen and (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-section p {
+    font-size: 1.2em;
+    max-width: 100%;
+  }
+
+  .w-button {
+    width: 130px;
+    font-size: 16px;
+  }
+}
+

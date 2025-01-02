@@ -311,4 +311,175 @@ footer {
   font-size: 20px;
 }
 
+/* Media Query për pajisjet me ekrane të vogla (telefonat) */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo p {
+    position: static;
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  header .logo img {
+    width: 80px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  /* Content Photo */
+  .content-photo {
+    height: 200px;
+  }
+
+  .content-paragraph {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .content p {
+    font-size: 18px;
+    max-width: 100%;
+    margin: 0 15px;
+  }
+
+  .section-orange h2 {
+    font-size: 2.5em;
+  }
+
+  /* Social Icons */
+  .social-icons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+
+  /* Team Section */
+  .section-dark {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .section-dark-titulli {
+    font-size: 2em;
+    position: static;
+    margin: 10px 0;
+  }
+
+  .team-members {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team-members .member {
+    max-width: 250px;
+  }
+
+  .team-members img {
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .team-members h3 {
+    font-size: 20px;
+  }
+
+  .team-members p {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px 0;
+  }
+
+  /* Contact Form */
+  .form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .contact-form .send-button {
+    font-size: 20px;
+  }
+
+  .harta iframe {
+    height: 300px;
+  }
+
+  .info h1 {
+    font-size: 28px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+}
+
+/* Media Query për pajisjet më të vogla (pajisjet mobile të vogla) */
+@media screen and (max-width: 480px) {
+  /* Content Paragraph */
+  .content p {
+    font-size: 16px;
+  }
+
+  .section-orange h2 {
+    font-size: 2em;
+  }
+
+  .team-members h3 {
+    font-size: 18px;
+  }
+
+  .team-members p {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form .send-button {
+    font-size: 18px;
+  }
+
+  .info h1 {
+    font-size: 24px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+}
 

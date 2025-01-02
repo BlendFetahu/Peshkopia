@@ -77,7 +77,6 @@ body {
   width: 500px; /* Slider më i vogël */
   max-width: 900px;
   margin: 30px auto;
-  border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 0px 20px rgba(160, 128, 128, 0.1);
   background-size: cover;
@@ -91,7 +90,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover; /* Përshtat foton pa deformuar */
-  border-radius: 90px;
+  border-radius: 100px;
   transition: opacity 1s ease-in-out; /* Efekti i kalimit të imazheve */
 
 }
