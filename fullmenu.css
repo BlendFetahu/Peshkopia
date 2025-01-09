@@ -136,4 +136,114 @@ body {
     margin-bottom: 15px;
   }
 
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
 
+    .logo img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .menu {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .menu h1 {
+        font-size: 24px;
+    }
+
+    .menu h4 {
+        font-size: 18px;
+    }
+
+    .menu-item p {
+        font-size: 18px;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .menu-item .pjata {
+        font-size: 20px;
+    }
+
+    .menu-item .price {
+        font-size: 20px;
+    }
+
+    .menu-item .description {
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .caption {
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    .caption h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .menu {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .menu h1 {
+        font-size: 20px;
+    }
+
+    .menu h4 {
+        font-size: 16px;
+    }
+
+    .menu-item p {
+        font-size: 16px;
+    }
+
+    .menu-item .pjata, .menu-item .price {
+        font-size: 18px;
+    }
+
+    .menu-item .description {
+        font-size: 12px;
+    }
+
+    .caption {
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    .caption h1 {
+        font-size: 24px;
+    }
+}
