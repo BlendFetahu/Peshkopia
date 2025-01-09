@@ -149,3 +149,100 @@ button.submit-button {
 button.submit-button:hover {
   background-color: #81624b;
 }
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+      height: auto;
+  }
+
+  .logo img {
+      width: 80px;
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-links ul li {
+      margin: 5px 0;
+  }
+
+  .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px;
+      box-shadow: none;
+  }
+
+  h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .form-row {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .form-group {
+      margin-right: 0;
+  }
+
+  input, textarea {
+      font-size: 14px;
+      height: auto;
+  }
+
+  button.submit-button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 5px;
+  }
+
+  .logo img {
+      width: 60px;
+  }
+
+  .container {
+      width: 100%;
+      margin: 10px auto;
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  p {
+      font-size: 12px;
+  }
+
+  .form-row {
+      gap: 5px;
+  }
+
+  .form-group label {
+      font-size: 12px;
+  }
+
+  input, textarea {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  button.submit-button {
+      font-size: 12px;
+      padding: 8px;
+  }
+}

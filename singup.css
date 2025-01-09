@@ -81,3 +81,25 @@ button:hover{
 .options a:hover{
     color: #b34100;
 }
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .signup h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .options {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+}
