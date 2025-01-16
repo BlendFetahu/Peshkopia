@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifikimi i fjalëkalimit
     if (!password_verify($password, $user['password'])) {
         echo "Invalid username or password!";
-        exit();
+          exit();
     }
 
     // Ruajtja e sesionit
