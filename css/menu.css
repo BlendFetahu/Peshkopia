@@ -10,7 +10,7 @@ body {
   color: #333;
   font-family: 'Arial', sans-serif;
   overflow-y: hidden;
-  background: url(images/background1.jpg) no-repeat center center/cover;
+  background: url(/images/background1.jpg) no-repeat center center/cover;
   background-attachment: fixed;  /* Bën që background-i të mbetet i fiksuar kur skrolloni */
   background-position: center;  /* Pozicionon background-in në qendër */
 

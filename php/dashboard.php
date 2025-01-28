@@ -1,5 +1,5 @@
 <?php
-include('../db/db.php');
+include('php/db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,31 +65,31 @@ include('../db/db.php');
         </tr>
     </thead>
     <tbody>
-        <?php
-        $sql = "SELECT * FROM kontaktet";
-        $result = $conn->query($sql);
+    <?php
+$sql = "SELECT * FROM kontaktet";
+$result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td>{$row['id']}</td>
-                    <td>{$row['emri']}</td>
-                    <td>{$row['email']}</td>
-                    <td>{$row['mesazhi']}</td>
-                    <td>{$row['data']}</td>
-                    <td>
-                 <a href="create_reservation/create_reservation.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Ndrysho</a>
-                 <a href="delete_reservation.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Fshij</a>                    
-                    </td>
-                </tr>";
-            }
-        } else {
-            echo "<tr><td colspan='5'>Nuk ka të dhëna.</td></tr>";
-        }
-        ?>
-    </tbody>
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Kontrollo që thonjëzat janë të mbyllura saktë
+        echo "<tr>
+            <td>" . $row['id'] . "</td>
+            <td>" . $row['emri'] . "</td>
+            <td>" . $row['email'] . "</td>
+            <td>" . $row['mesazhi'] . "</td>
+            <td>" . $row['data'] . " </td> d
+            <td>
+             <a href='php/create_reservation.php?id=" . $row['id'] "' class='btn btn-success'>Ndrysho</a>
+                <a href='php/delete_reservation.php?id=" . $row['id'] "' class='btn btn-danger'>Fshij</a>
+            </td>;
+        </tr>";
+    }
+} else {
+    echo "<tr><td colspan='5'>Nuk ka të dhëna.</td></tr>";
+}
+?>
+</tbody>
 </table>
-
     </div>
 </body>
 </html>

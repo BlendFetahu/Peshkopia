@@ -1,6 +1,8 @@
 <?php
-include('../db/db.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/Peshkopia/php/db.php');
+?>
 
+<?php
 // Kontrollo nëse ID është dhënë në URL
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     die("Gabim: ID mungon ose është i pavlefshëm.");
