@@ -1,5 +1,5 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . '/Peshkopia/php/db.php');
+include('db.php');
 ?>
 
 <?php
@@ -48,6 +48,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Përditëso Rezervimin</title>
+    <!-- Lidhja me stilin CSS -->
+    <link rel="stylesheet" href="../css/create_reservationstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Përditëso Rezervimin</h2>
 <form method="POST" action="">
     <label for="emri">Emri:</label>
     <input type="text" name="emri" value="<?php echo $reservation['emri']; ?>" required><br>
@@ -62,7 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="number" name="numri_personave" value="<?php echo $reservation['numri_personave']; ?>" required><br>
 
     <label for="telefoni">Telefoni:</label>
-    <input type="text" name="telefoni" value="<?php echo $reservation['telefoni']; ?>"><br>
+    <input type="text" name="telefoni" value="<?php echo isset($reservation['telefoni']) ? $reservation['telefoni'] : ''; ?>"> <br>
+
 
     <label for="statusi">Statusi:</label>
     <select name="statusi">
