@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = $_POST['data'];
     $ora = $_POST['ora'];
     $numri_personave = $_POST['numri_personave'];
-    $telefoni = $_POST['telefoni'];
     $statusi = $_POST['statusi'];
 
     // Validoni të dhënat (opsionale, por e rekomanduar)
@@ -36,16 +35,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Update rezervimin në bazën e të dhënave duke përdorur deklaratë të përgatitur
-    $update_stmt = $conn->prepare("UPDATE rezervime SET emri = ?, data = ?, ora = ?, numri_personave = ?, telefoni = ?, statusi = ? WHERE id = ?");
-    $update_stmt->bind_param("sssissi", $emri, $data, $ora, $numri_personave, $telefoni, $statusi, $id);
+    $update_stmt = $conn->prepare("UPDATE rezervime SET emri = ?, data = ?, ora = ?, numri_personave = ? , statusi = ? WHERE id = ?");
+    $update_stmt->bind_param('sssssi',$emri, $data, $ora, $numri_personave, $statusi, $id);
 
     if ($update_stmt->execute()) {
-        header("Location: ../dashboard/dashboard.php?update=success");
+        header("Location: ../php/dashboard.php?update=success");
         exit();
     } else {
-        echo "Gabim gjatë përditësimit: " . $update_stmt->error;
+        error_log("Gabim gjatë përditësimit: " . $update_stmt->error); // Regjistro gabimin
+        echo "Gabim gjatë përditësimit: " . htmlspecialchars($update_stmt->error); // Shfaq gabimin
     }
 }
+    
 ?>
 
 
@@ -75,8 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="numri_personave">Numri i personave:</label>
     <input type="number" name="numri_personave" value="<?php echo $reservation['numri_personave']; ?>" required><br>
 
-    <label for="telefoni">Telefoni:</label>
-    <input type="text" name="telefoni" value="<?php echo isset($reservation['telefoni']) ? $reservation['telefoni'] : ''; ?>"> <br>
+    
+
+
+
 
 
     <label for="statusi">Statusi:</label>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rezervimi Tavolinës</title>
-  <link rel="stylesheet" href="/css/reservation.css">
+  <link rel="stylesheet" href="../css/reservation.css">
 </head>
 <body>
 
@@ -12,17 +12,17 @@
   <header>
     <div class="navbar">
        <div class="logo">
-          <img src="/images/logo.jpg" alt="Peshkopia Restaurant Logo">
+          <img src="../images/logo.jpg" alt="Peshkopia Restaurant Logo">
            <p>Peshkopia Restaurant</p>
       </div>
           <div class="nav-links">
               <ul>
-                  <li><a href="/html/index.html">HOME</a></li>
-                  <li><a href="/html/index2.html">RRETH NESH</a></li>
+                  <li><a href="../html/index.html">HOME</a></li>
+                  <li><a href="../html/index2.html">RRETH NESH</a></li>
                   <li><a href="/html/menu.html">MENU</a></li>
                   <li><a href="/html/reservation.html">RESERVATION</a></li>
-                  <li><a href="/html/login.html">LOG IN</a></li>
-                  <li><a href="/html/singup.html">SIGN UP</a></li>
+                  <li><a href="../php/login.php">LOG IN</a></li>
+                  <li><a href="../php/register.php">SIGN UP</a></li>
                </ul>
           </div>
       </div>
@@ -32,54 +32,47 @@
 
   <div class="container">
     <h1>Rezervimi Tavolinës</h1>
-    <p>Ju lutem plotësoni formularin më poshtë për të rezervuar tavolinën tuaj. Përmes <strong>SMS</strong> do të konfrimojmë rezervimin tuaj sa më shpejt të jetë e mundur. </p>
-    <form class="rezervimi">
-      
+    <p>Ju lutem plotësoni formularin më poshtë për të rezervuar tavolinën tuaj. Përmes <strong>SMS</strong> do të konfirmojmë rezervimin tuaj sa më shpejt të jetë e mundur. </p>
+    <form class="rezervimi" method="POST" action="../php/dashboard.php">
       <div class="form-row">
         <div class="form-group">
           <label for="data">Data</label>
-          <input type="date" id="data" required>
+          <input type="date" id="data" name="data" required>
         </div>
         <div class="form-group">
           <label for="emri">Emri</label>
-          <input type="text" id="emri" placeholder="Shkruani emrin tuaj" required>
+          <input type="text" id="emri" name="emri" placeholder="Shkruani emrin tuaj" required>
         </div>
       </div>
-      
       
       <div class="form-row">
         <div class="form-group">
           <label for="email">Emaili | Opsionale</label>
-          <input type="email" id="email" placeholder="Shkruani emailin tuaj">
+          <input type="email" id="email" name="email" placeholder="Shkruani emailin tuaj">
         </div>
         <div class="form-group">
           <label for="teftuarit">Numri i të ftuarëve</label>
-          <input type="number" id="teftuarit" placeholder="Numri" required>
+          <input type="number" id="teftuarit" name="teftuarit" placeholder="Numri" required>
         </div>
       </div>
-      
       
       <div class="form-row">
         <div class="form-group">
           <label for="koha">Koha</label>
-          <input type="time" id="koha" required>
-        </div>
-        <div class="form-group">
-          <label for="telefoni">Numri Telefonit</label>
-          <input type="tel" id="telefoni" placeholder="Nr.Telefoni" required>
+          <input type="time" id="koha" name="koha" required>
         </div>
       </div>
       
-    
       <div class="form-group">
         <label for="mesazhi">Mesazhi për ne:</label>
-        <textarea id="mesazhi" placeholder="Shkruani këtu..."></textarea>
+        <textarea id="mesazhi" name="mesazhi" placeholder="Shkruani këtu..."></textarea>
       </div>
       
-      
-      <button type="submit" class="submit-button">Rezervo Tavolinën</button>
+      <button type="submit" name="submit_reservation" class="submit-button">Rezervo Tavolinën</button>
     </form>
-  </div>
+</div>
+
+    
 
 </body>
 </html>

@@ -11,7 +11,7 @@ body {
   color: #333;
   font-family: 'Arial', sans-serif;
   overflow-y: hidden;
-  background: url(/images/background1.jpg) no-repeat center center/cover;
+  background: url('http://localhost/peshkopia/images/background1.jpg') no-repeat center center/cover;
 }
 
 
@@ -86,7 +86,7 @@ h1 {
   color: white;
 }
 
-p {stroke-linecap: ;
+p {
   text-align: center;
   margin-bottom: 20px;
   color: white;
@@ -132,7 +132,7 @@ textarea {
 }
 
 
-button.submit-button {
+button.submit_reservation {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
@@ -146,7 +146,7 @@ button.submit-button {
   transition: background-color 0.3s ease;
 }
 
-button.submit-button:hover {
+button.submit_reservation:hover {
   background-color: #81624b;
 }
 @media (max-width: 768px) {
@@ -241,7 +241,7 @@ button.submit-button:hover {
       padding: 8px;
   }
 
-  button.submit-button {
+  button.submit_reservation {
       font-size: 12px;
       padding: 8px;
   }

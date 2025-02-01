@@ -2,6 +2,63 @@
 <?php
 include('db.php');
 
+
+// Kontrollojmë për dërgimin e formularit të kontaktit
+if (isset($_POST['submit_message'])) {
+    $emri = $_POST['emri'];
+    $email = $_POST['email'];
+    $mesazhi = $_POST['mesazhi'];
+
+    // Ruajmë të dhënat në databazë për formularin e kontaktit
+    if (!empty($emri) && !empty($email) && !empty($mesazhi)) {
+        $sql = "INSERT INTO kontaktet (emri, email, mesazhi, data) VALUES (?, ?, ?, NOW())";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $emri, $email, $mesazhi);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Mesazhi u dërgua me sukses!'); window.location.href='../html/index2.html';</script>";
+        } else {
+            echo "<script>alert('Gabim gjatë dërgimit të mesazhit.');</script>";
+        }
+        $stmt->close();
+    } else {
+        echo "<script>alert('Ju lutemi plotësoni të gjitha fushat!');</script>";
+    }
+}
+
+// Kontrollojmë për dërgimin e formularit të rezervimit
+if (isset($_POST['submit_reservation'])) {
+    $data = $_POST['data'];
+    $emri = $_POST['emri'];
+    $ora = $_POST['koha']; // Ndryshojmë nga 'koha' në 'ora'
+    $numri_personave = $_POST['teftuarit']; // Sigurohu që në formë të jetë 'teftuarit'
+    $statusi = "Ne Pritje"; // Vendosim statusin default
+
+    // Kontrollojmë nëse të gjitha fushat janë mbushur
+    if (!empty($data) && !empty($emri) && !empty($ora) && !empty($numri_personave)) {
+        
+        // SQL për futjen e të dhënave
+        $sql = "INSERT INTO rezervime (`data`, emri, ora, numri_personave, statusi) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssis", $data, $emri, $ora, $numri_personave, $statusi);
+
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Rezervimi u dërgua me sukses!');window.location.href='../html/reservation.html';</script>";
+            // header("Location: reservation.html"); 
+            exit();
+        } else {
+            die("Gabim gjatë dërgimit të rezervimit: " . $stmt->error);
+        }
+
+        $stmt->close();
+    } else {
+        echo "<script>alert('Ju lutemi plotësoni të gjitha fushat për rezervimin!');</script>";
+    }
+}
+
+
+
 // Fshirja e rezervimeve
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_reservation_id'])) {
     $id = $_POST['delete_reservation_id'];
@@ -46,6 +103,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_contact_id'])) 
 <body>
     <div class="container">
         <h1>Menaxhimi i Rezervimeve</h1>
+
+        <a href="insert_reservation.php">
+    <button style="background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;">Shto Rezervim</button>
+</a>
+
         <table>
             <thead>
                 <tr>

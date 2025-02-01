@@ -7,7 +7,7 @@
 }
 /*Stilet qe vlejne per gjithe body */
 body {
-  background: url('C:\xampp\htdocs\Projekti\Peshkopia\images\background.jpg') no-repeat center center/cover;
+  background: url('../images/background1.jpg') no-repeat center center/cover !important; 
   color: #fff;
   overflow-y: hidden;
 }
