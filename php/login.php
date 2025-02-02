@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <div class="container">
        
-        <form class="log-in" method="POST" id="form" >
+        <form class="log-in" action="validate_login.php" method="POST" id="form" >
 
            <h2>Log In</h2>
 
