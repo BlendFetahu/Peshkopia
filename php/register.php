@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <!-- Connect form to validate_signup.php -->
-        <form action="validate_signup.php" method="POST" class="signup" >
+        <form  method="POST" class="signup" >
             <h2>Sign up</h2>
 
             <div class="input">

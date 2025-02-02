@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <div class="container">
        
-        <form class="log-in" action="validate_login.php" method="POST" id="form" >
+        <form class="log-in"  method="POST" >
 
            <h2>Log In</h2>
 
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
            <div class="input">
             <label for="password"><b>Password:</b></label>
-            <input type="password" id="password" name="password" placeholder="Shënoni Fjalëkalimin">
+            <input type="password" id="password" name="password" placeholder="Shënoni Fjalëkalimin" required>
            </div>
 
            <button type="submit">Kyçu</button>
