@@ -8,6 +8,9 @@ const confirmPassword = document.getElementById("confirm");
 
 // Regex për email (format korrekt: example@domain.com)
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// Regex for password: minimum 8 characters, at least one letter and one number, letters and numbers only
+const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
 
 // Event listener për submit
 form.addEventListener("submit", function (event) {
@@ -25,11 +28,12 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  // Validimi i password (duhet të ketë të paktën 8 karaktere)
-  if (password.value.length < 8) {
-    alert("Password duhet të jetë të paktën 8 karaktere!");
-    return;
-  }
+  // Validimi i password (duhet të ketë të paktën 8 karaktere dhe të përmbajë shkronja dhe numra)
+if (!passwordPattern.test(password.value)) {
+  alert("Password duhet të ketë të paktën 8 karaktere, një shkronjë dhe një numër (vetëm shkronja dhe numra lejohet)!");
+  return;
+}
+
 
   // Kontrollo nëse password dhe confirm përputhen
   if (password.value !== confirmPassword.value) {

@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In | Peshkopia</title>
     <link rel="stylesheet" href="../css/login.css">
-    <script defer src="/js/script.js"></script>
+    <script defer src="../js/script.js"></script>
 </head>
 <body>
     

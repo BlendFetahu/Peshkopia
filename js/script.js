@@ -9,13 +9,13 @@ form.addEventListener("submit", function (event) {
 
   // Merr vlerat e input-eve
   const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("psw").value;
+  const password = document.getElementById("password").value;
 
   // Regex për email (standarde)
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   // Regex për fjalëkalimin (min 8 karaktere, 1 numër, 1 simbol)
-  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   // Validimi i email-it
   if (!emailPattern.test(email)) {
